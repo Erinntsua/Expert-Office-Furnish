@@ -10,20 +10,26 @@ export default function Header() {
             <div className="container mx-auto flex justify-between items-center">
               <img src={logo} alt="Expert Office Logo" className="h-20" />
               <nav className="space-x-4 text-white hidden sm:block">
+                <Link to="/home">
                 <button onClick={() => scrollToSection('home')} className="hover:underline">Home</button>
+                </Link>
                <Link to="/shop">
                 <button onClick={() => scrollToSection('products')} className="hover:underline">Products</button>
                 </Link>
                 <button onClick={() => scrollToSection('testimonials')} className="hover:underline">Testimonials</button>
-                <Link to="/contact">
+                <Link to="/services">
                   <button onClick={() => scrollToSection('contact')} className="hover:underline">Our Services</button>
                 </Link>
               </nav>
               <div className="flex items-center gap-4 text-white">
                 <Search className="cursor-pointer" />
                 <User className="cursor-pointer" />
-                <ShoppingCart className="cursor-pointer" />
+                <Link to="/cart">
+                  <ShoppingCart className="cursor-pointer" />
+                </Link>
+                <Link to="/contact">
                 <button onClick={() => scrollToSection('contact')} className="bg-white text-green-800 px-3 py-1 rounded-lg text-sm font-semibold hover:bg-green-200">Contact</button>
+                </Link>
               </div>
             </div>
           </header>

@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import './index.css'; // Import Tailwind CSS
+import CartPage from './pages/CartPage'; // Import CartPage
 
 const root = createRoot(document.getElementById('root'));
 root.render(
@@ -14,10 +15,12 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/home" element={<Homepage />} /> {/* ✅ NEW ROUTE */}
         <Route path="/shop" element={<ShopPage />} /> {/* ✅ NEW ROUTE */}
         <Route path="/contact" element={<ContactPage />} /> {/* ✅ NEW ROUTE */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/cart" element={<CartPage />} /> {/* ✅ NEW ROUTE */}
         {/* Add other routes as needed */}
         <Route path="*" element={<div className="text-center py-16">404 - Page Not Found</div>} />
       </Routes>
